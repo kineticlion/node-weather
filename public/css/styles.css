@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0 10vw;
+}
+
+.input {
+  width: 50%;
+}
+
+#api-error {
+  color: red;
+  font-size: 1.5vw;
+}
+
+#api-data {
+  color: black;
+  margin-top: 15px;
+  font-size: 1.5vw;
+}
+
+.form-control:focus {
+  border-color: lightgrey;
+  box-shadow: 0 0 0 0.2rem lightgrey;
+}
+
+main {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+h1 {
+  color: black;
+  font-size: 5vw;
+  margin: 10px 0px;
+}
+
+p,
+footer {
+  font-size: 2vw;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  padding: 20px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+a:visited {
+  color: black;
+}
+
+a.active {
+  color: red;
+}
+
+a:hover {
+  text-decoration: none;
+}
+img {
+  border-radius: 50%;
+  width: 18vw;
+}
+
+footer {
+  border-top: 1px solid #eeeeee;
+  padding: 20px;
+  color: grey;
+}
