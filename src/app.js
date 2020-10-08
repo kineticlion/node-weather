@@ -5,6 +5,7 @@ const { geocode } = require("./utils/mapbox");
 const { forecast } = require("./utils/weatherstack");
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 //Define paths for express config
 const publicDirectoryPath = path.join(__dirname, "../public");
@@ -61,7 +62,6 @@ app.get("/weather", (req, res) => {
     //gets forecast at the latitude and longitude
     forecast(data.latitude, data.longitude, data.location, (error, data) => {
       if (error) return res.send({ error });
-      console.log(data);
       res.send({
         data,
       });
@@ -95,6 +95,6 @@ app.get("*", (req, res) => {
   });
 });
 
-app.listen(3000, (req, res) => {
-  console.log(`Server started at http://localhost:3000 !`);
+app.listen(port, (req, res) => {
+  console.log(`Server started at port ${port} !`);
 });

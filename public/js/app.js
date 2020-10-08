@@ -6,7 +6,7 @@ const apiData = document.querySelector("#api-data");
 const apiError = document.querySelector("#api-error");
 
 const fetchWeather = async (location) =>
-  (await fetch(`http://localhost:3000/weather?address=${location}`)).json();
+  (await fetch(`/weather?address=${location}`)).json();
 
 weatherForm.addEventListener("submit", (e) => {
   apiError.innerHTML = "";

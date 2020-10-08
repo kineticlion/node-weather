@@ -6,8 +6,6 @@ const weatherstack = axios.create({
 });
 
 const forecast = async (latitude, longitude, location, callback) => {
-  console.log(latitude, longitude, location);
-
   if (typeof latitude !== "number" || typeof longitude !== "number") {
     return callback(`Unable to find location. Try another search`, undefined);
   }
